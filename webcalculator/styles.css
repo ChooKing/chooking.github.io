@@ -1,53 +1,71 @@
-body
-{
+body{
     background-color: rgb(4, 31, 23);
+    --button-color: rgb(141, 160, 141);
 }
 
-div#PageContainer
-{
+.PageContainer{
     
-    min-width: 400px;
-    max-width: 1200px;
+    min-width: 450px;
+    max-width: 75vw;
     margin-left: auto;
     margin-right: auto;
+    display: flex;
+    justify-content: center;
 }
-div#CalcFrame
-{
-    width: 100%;
+.PageContainer > *{
+    flex: 1 1 0;    
+}
+
+div#CalcContents{ 
+    width: 31vw;
+    padding: 1vw;   
+    margin: 1vw;
     border: 1px solid white;
 }
-div#CalcContents
-{    
-    margin: 1rem;
-}
-div#LCD
-{
-    font-family: 'Major Mono Display';
+div#LCD{
+    font-family: 'Rajdhani', sans-serif;
     font-weight: bold;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 1vw;
+    padding-right: 1vw;
     
     background-color: rgb(53, 112, 114);
     color: black;
-    font-size: 4vw;
+    font-size: 3.5vw;
     text-align: right;
     margin-bottom: 1rem;
+    width: 29vw;
     overflow-x: auto;    
 }
 
-div#ButtonsContainer
-{
+div#ButtonsContainer{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
+    grid-template-columns: repeat(4, 7vw);
+    gap: 1vw;
 }
-.CalcButton
-{
+.CalcButton{
     font-family: 'Nanum Gothic';    
-    background-color: rgb(141, 160, 141);
+    background-color: var(--button-color);
     color: black;
     text-align: center;
     font-size: 3.5vw;
     cursor: pointer;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
 }
 
+.Description{
+    margin-left: 1vw;
+    color: var(--button-color);
+}
+.Description h1{
+    text-align: center;
+}
+table, td{
+    border: 1px solid var(--button-color);
+    padding: 6px;
+}
+@media only screen and (max-width: 1000px) {
+    .PageContainer{
+        flex-direction: column;
+    }
+}
