@@ -1,8 +1,11 @@
 //Use a single event handler for all button clicks instead of a separate handler for each
 let btnContainer=document.querySelector('#ButtonsContainer');
 btnContainer.addEventListener('click',(e)=>{
-    //Strip btn from the id of the element that triggered the click listener only if it starts with btn       
-    let btnName=e.target.id.match(/(?<=btn)\S*/)[0];     
+    //Strip btn from the id of the element that triggered the click listener only if it starts with btn    
+    let btnName=/^btn/.test(e.target.id) ? e.target.id.substring(3) : null;    
+    //Safari does not support regex look around
+    //let btnName=e.target.id.match(/(?<=btn)\S*/)[0]; 
+    
     //All digits and decimals are processed by the same function  
     if (/^[\d.]$/.test(btnName)){
         operand.appendDigit(btnName);
