@@ -1,46 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <link rel="stylesheet" href="./style.css">
+    <meta charset="UTF-8" />     
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Budgie Defender</title>
+    <script type="module" crossorigin src="./assets/index.051db161.js"></script>
   </head>
-  <body style="overflow: hidden;">    
-    <canvas id="game"></canvas>
-    <div id="footer">
-      <div id="title">
-        BUDGIE DEFENDER
-      </div>
-      <div id="stats">
-        <div id="level">
-          <div>LEVEL: </div>
-          <div id="levelNumber">1</div>
-        </div>
-        <div id="ammo">
-          <div>AMMO: </div>
-          <div id="ammoNumber">50</div>
-        </div>
-        <div id="lives">
-          <div>LIVES: </div>
-          <div id="livesNumber">4</div>
-        </div>
-        <div id="score">
-          <div>SCORE: </div>
-          <div id="scoreNumber">0</div>
-        </div>    
-      </div>
-    </div>
-    <script type="module" src="./main.js"></script>
-    <script src="./loadSprites.js"></script>
-    <script src="./background.js"></script>
-    <script src="./player.js"></script>
-    <script src="./ufo.js"></script>
-    <script src="./snake.js"></script>
-    <script src="./explosion.js"></script>
-    <script src="./icecream.js"></script>
-    <script src="./supply.js"></script>
-    <script src="./stats.js"></script>
+  <body>    
+    <div id="game"></div>    
+    
+    <style>      
+      body{
+        margin: 0;
+        padding: 0;
+        background-color: black;        
+      }
+      canvas{
+        width: 1600px;
+        height: 900px;        
+      }
+    </style>
   </body>
 </html>
